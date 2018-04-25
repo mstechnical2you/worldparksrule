@@ -1,0 +1,32 @@
+
+.jumbotron {
+    background-image: url("../photos/us/lake_sherburne.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 600px; 
+}
+
+
+.carousel {
+    min-height: 600px; 
+    margin-bottom: 40px;
+}
+
+.row {
+    margin-top: 40px
+    
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button {
+  background: #3B5998;
+  color: white;
+}
+
+    
+    
+
