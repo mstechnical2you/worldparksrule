@@ -1,66 +1,55 @@
+<!--   <form action="#"> -->
+       <!-- Problem one: using the same ID multiple times
+            Solution: give every radio button a different ID    -->
+       
+        <input id="chicken" type="radio" name="menuChoice"  value="chicken">Chicken<br>
+        <input id="beef" type="radio" name="menuChoice" value="beef">Beef<br>
+        <input id="vegeterian" type="radio" name="menuChoice" value="vegeterian">Vegeterian<br>
+       
+        
+        <button onclick="myFunction()">Choose Menu</button> <!-- Call the function when the button is clicked-->
+<!--     </form> -->
+    
+    <h1 id="yourChoice"></h1>
+   <div id="menuImg"><img id="imgChange" src="" alt="" width="200"></div>
+
+
+
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    
-    <link href="https://fonts.googleapis.com/css?family=Mada" rel="stylesheet">
-    <title>Is That A Park? Really?</title>
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro" rel="stylesheet">
 </head>
 <body>
+   
+   <h1 id="myVar">Let's Play Park Picker.</h1>
+   
+    <form action="#">
+       <!-- Problem one: using #memu multiple times-->
+        <input type="radio" name="ParkPicker"  value="chicken">Chicken<br>
+        <input type="radio" name="ParkPicker" value="beef">Beef<br>
+        <input type="radio" name="ParkPicker" value="vegeterian">Vegeterian<br>
+        <input type="radio" name="ParkPicker"  value="chicken">Chicken<br>
+        <input type="radio" name="ParkPicker" value="beef">Beef<br>
+        
+        <button onclick="ParkPickerFunction(value)">Park Picker</button>
+    </form>
     
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="index.html">Home<span class="sr-only">(current)</span> </a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button><!-- end button that opens and collapses the menu -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a href="" class="nav-link" href="index.html">Parks Rule!</a>
-                </li>
-                <li class="nav-item">
-                     <a href="" class="nav-link" href="us.html">U.S. National Parks</a>
-                </li>
-                <li class="nav-item">
-                     <a href="" class="nav-link" href="quiz.html">Park Picker Quiz</a>
-                </li>
-            </ul> <!-- end list menu items --> 
-        </div> <!-- end elements that collapse --> 
-    </nav> <!-- end nav --> 
-
-
- 
-    
-      
-<div class="container"> <!-- tha big container -->
-
-
-
-
-<div class="footer"><a href="index.html">Home link</a><br> 
-<!--Facebook icon  <>  Instagram icon  <>  Twitter icon<br> -->
-
-<button type="button">Facebook!</button>
-<a href="#" class="fa fa-facebook"></a>
-
-</div> <!-- end footer -->
-
-</div> <!-- end big container --> 
-    
-  
-
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    
+
 <!--Local script file-->
-<script src="js/script.js"></script>
+<script src="js/parkquiz.js"></script>
+
+    <script src="js/parkquiz.js"></script>
+    
+    
 </body>
 </html>
