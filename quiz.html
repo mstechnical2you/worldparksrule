@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display Source+Sans+Pro" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Wow! That's A Park? Really?</title>
 </head>
@@ -17,7 +15,6 @@
 
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd">
       <a class="navbar-brand" href="index.html">Home<span class="sr-only">(current)</span> </a>
-      
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     
@@ -27,73 +24,46 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    
                     </li>
                     
                     <li class="nav-item">
-                    <a href="parksrule.html" class="nav-link">Parks Rule!</a>
+                    <a href="parksrule.html" class="nav-link" >Parks Rule!</a>
                 </li>
                 
                 <li class="nav-item">
-                     <a href="...photos/us/us.html" class="nav-link">U.S. National Parks</a>
+                     <a href="us.html" class="nav-link">U.S. National Parks</a>
                 </li>
-                
                 <li class="nav-item">
-                     <a href="quiz.html" class="nav-link">Park Picker Quiz</a>
+                     <a href="quiz.html" class="nav-link" >Park Picker Quiz</a>
                 </li>
-                
             </ul> <!-- end list menu items --> 
         </div> <!-- end elements that collapse --> 
     </nav> <!-- end nav --> 
 
-<div class="container"> <!-- tha big container -->
-<img class="d-block w-100" src="photos/us/lake_sherburne.jpg" alt="Glacier">
-<caption>Glacier National Park Lake Sherburne (Montana) Credit: Photo by David Restivo</caption>
 
  <div class="jumbotron jumbotron-fluid container-fluid">
      
-<div class="container fluid"> <!-- tha big container -->
+     </div>   <!-- end jumbotron --> <!--   <form action="#"> -->
+     
+  <form action="myFunction(favPark)">
+  <input type="radio" name="park"  value="The Badlands">"Wow. You are Bad to the bone. The Badlands National Park is Your Favorite Park"<br>
+  <input type="radio" name="park"  value="Denali">"Wow. You enjoy Grazing with the sheep. Denali National Park is Your Favorite Park"<br>
+  <input type="radio" name="park"  value="Point Reyes">"Wow. You enjoy Swimming with the whales. Point Reyes National Seashore Park is Your Favorite Park"<br>
+  <input type="radio" name="park"  value="Arches">"Wow. You must love McDonalds. Arches National Park Red Arch Wonderland is Your Favorite Park");
+    else if {myVar}.checked)<br>
+  <input type="radio" name="park"  value="Yosemite">"Wow. You must enjoy eating Skittles. Yosemite National Park Rainbow Vernal Falls is Your Favorite Park"<br><br>
 
-<div class="row">
-    
-    <a href="us.html"class="nav-link"><h3>Carousel of Parks</h3> <i>(Click Here)</i></a>
-    <!--<div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>-->
-    
-        <h3>What's Your Favorite Park? Take Our Park Picker Quiz</h3>
-        
+  Your favorite Park is: <input type="text" id="result">
+  <input type="submit" id="getPark" value="Park Picker Submit"></input>
   
-    </div> <!-- end col 12 --> 
+</form>
+
+
+      
     
-</div> <!-- end row -->
-
- <!--    </div>   <!-- end jumbotron --> 
-
-
-
-
-
-<!--Social Media Icons Using jQuery-->
-<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
-
-
-<!-- Add font awesome icons -->
-
-<a href="#" class="fa fa-facebook"></a>
-<a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-google"></a>
-<a href="#" class="fa fa-youtube"></a>
-<a href="#" class="fa fa-instagram"></a>
-<a href="#" class="fa fa-pinterest"></a>
-
-
-
-
-<!--</div> <!-- end big container --> 
-    
-
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
@@ -101,7 +71,6 @@
 
 <!--Local script file-->
 <script src="js/parkquiz.js"></script>
-
 
 </body>
 </html>
