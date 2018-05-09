@@ -1,34 +1,130 @@
+(function() {
+  function buildQuiz() {
+    
+    // we'll need a place to store the HTML output
+    const output = [];
 
-$function() 
-    $('#getPark').click (function(){
-      myFunction(favPark);
-      
-    })function myFunction(favPark) {
-    var answer = document.getElementById("result").value = favPark;
-    switch(answer) {
-      
-      case The Badlands:
-        window.open("https://www.nps.gov/badl/index.htm");
-        break;
-        
-      case Denali:
-        window.open("https://www.nps.gov/dena/index.htm");
-        break;
-        
-      case Point Reyes:
-        window.open("https://www.nps.gov/pore/index.htm");
-        break;
-        
-      case Arches:
-        window.open("https://www.nps.gov/arch/index.htm");
-        break;
-        
-      case Yosemite:
-        window.open("https://www.nps.gov/yose/index.htm");
-        break;
-        
-      default:
-    }
+    // for each question...
+    
+    myQuestions.forEach((currentQuestion, questionNumber) => {
+      // we'll want to store the list of answer choices
+      const answers = [];
 
-}
+      // and for each available answer...
+      for (letter in currentQuestion.answers) {
+        
+        
+        // ...add an HTML radio button
+        answers.push(
+          `<label>
+            <input type="radio" name="question${questionNumber}" value="${letter}">
+            ${letter} :
+            ${currentQuestion.answers[letter]}
+          </label>`
+        );
+      }
+
+      // add this question and its answers to the output
+      output.push(
+        `<div class="question"> ${currentQuestion.question} </div>
+        <div class="answers"> ${answers.join("")} </div>`
+      );
+    });
+
+    // finally combine our output list into one string of HTML and put it on the page
+    quizContainer.innerHTML = output.join("");
+  }
+
+  function showResults() {
+    // gather answer containers from our quiz
+    const answerContainers = quizContainer.querySelectorAll(".answers");
+
+    // keep track of user's answers
+    let numCorrect = 0;
+
+    // for each question...
+    myQuestions.forEach((currentQuestion, questionNumber) => {
+      // find selected answer
+      const answerContainer = answerContainers[questionNumber];
+      const selector = `input[name=question${questionNumber}]:checked`;
+      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+      // if answer is correct
+      if (userAnswer === currentQuestion.correctAnswer) {
+        // add to the number of correct answers
+        numCorrect++;
+
+        // color the answers green
+        answerContainers[questionNumber].style.color = "lightgreen";
+      } else {
+        // if answer is wrong or blank
+        // color the answers red
+        answerContainers[questionNumber].style.color = "red";
+      }
+    });
+
+    // show number of correct answers out of total
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+  }
+
+  const quizContainer = document.getElementById("quiz");
+  const resultsContainer = document.getElementById("results");
+  const submitButton = document.getElementById("submit");
+  const myQuestions = [
+    {
+      question: "What National Park has Bisons?",
+      answers: {
+        a: "Capitol Reef",
+        b: "The Badlands",
+        c: "Black Canyon"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "What National Park is home to the Dall Sheep?",
+      answers: {
+        a: "Denali National Park",
+        b: "Baa Baa Black Sheep",
+        c: "Greater Sunda Islands"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "What National Park is known for Black Abalones?",
+      answers: {
+        a: "Big Bend",
+        b: "Yellowstone",
+        c: "Point Reyes",
+        
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "What National Park is best for Swimming?",
+      answers: {
+        a: "Yosemite National Park",
+        b: "Baa Baa Black Sheep",
+        c: "Greater Sunda Islands"
+      },
+      correctAnswer: "a"
+    },
+    
+    {
+      question: "What National Park is best for Hiking?",
+      answers: {
+        a: "Valley National Park",
+        b: "Arches National Park",
+        c: "I would rather sleep"
+      },
+      correctAnswer: "b"
+    },
+  ];
+
+  // display quiz right away
+  buildQuiz();
+
+  // on submit, show results
+  submitButton.addEventListener("click", showResults);
+})();
+
 

@@ -1,8 +1,9 @@
 body {
-  margin:0;
-  padding:0;
+  margin:15px;
+  padding:10px;
   background-color: #e3f2fd;
   font-family: 'Playfair Display', serif; 
+  
   
 }
 
@@ -13,42 +14,67 @@ body {
     min-height: 600px; 
 }
 
+
+img {
+    background-image: url("...photos/rocky_mtn_wildflowers.jpg"); 
+}
+
+
 p {
   margin: 25px;
   
 }
 
-h2{
+
+h1{
   text-align: center;
+  font-size: large;
+  color: #000000;
 }
 
+h3{
+  text-align: center
+}
 
 .carousel {
     min-height: 600px; 
     margin-bottom: 40px;
 }
 
-
+label{
+  padding: 10px 10px 10px;
+}
 .row {
     margin-top: 60px;
     margin-bottom: 60px;
+    
 }
 
+.center {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    color: #8B008B;
+    
+}
 
-
-
+.right{
+  
+margin:auto;
+width:100%;
+text-align: center;
+}
 
 /* jQuery Plugin*/
 
 .fa {
   font-size: 30px;
-  width: 50px;
+  width: 45px;
   text-align: center;
   text-decoration: none;
-  margin: 5px 2px;
- 
+  
 }
- 
+  
 .fa:hover {
     opacity: 0.7;
 }
@@ -56,7 +82,7 @@ h2{
 .fa-facebook {
   background: #3B5998;
   color: white;
-   position: relative;
+  position: relative;
   }
 
 .fa-twitter {
@@ -80,7 +106,43 @@ h2{
   color: white;
 }
 
-    
+   /*The Quiz */
+   
+   body{
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #333;
+}
+.question{
+    font-weight: 600;
+    margin-left: 20px;
+    padding: 10px;
+}
+.answers {
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+.answers label{
+  display: block;
+}
+#submit{
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #279;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#submit:hover{
+    background-color: #38a;
+}
+
+
+
+
     
 
 
